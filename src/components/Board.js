@@ -67,7 +67,7 @@ function Board({ imgUrl }) {
   const hasWon = isSolved(tiles)
 
   return (
-    <>
+    <div className="contentDivStyle">
       <div className="boardStyle" >
         <ul style={style} className="board">
           {tiles.map((tile, index) => (
@@ -84,7 +84,7 @@ function Board({ imgUrl }) {
         </ul>
       </div>
       {hasWon && isStarted &&
-        <div className="hasWonDiv">
+        <div className="hasWonDiv paddingDiv">
           <span>{handleWonSound()}</span>
           <h2>Congratulations, puzzle solved! 🧠 🎉
           </h2>
@@ -92,13 +92,12 @@ function Board({ imgUrl }) {
             You are now invited to join our Discord channel for your next instructions.
           </h2>
           <br />
-          <Button variant="warning" onClick="https://www.instagram.com/myroaringcareers/?hl=en">Join Our Discord Channel</Button>
+          <Button className="btnStyle" variant="warning" onClick="https://discord.gg/wd4vh7Zq">Join Our M-Dash Discord Channel</Button>
         </div>}
       {!isStarted ?
-        (<Button className="startBtn" variant="success" onClick={() => handleStartClick()}>Start Game</Button>) :
-        (<Button className="restartBtn" variant="danger" onClick={() => handleShuffleClick()}>Restart Game</Button>)}
-
-    </>
+        (<div className="paddingDiv"><Button className="startBtn" variant="success" onClick={() => handleStartClick()}>Start Game</Button></div>) :
+        (<div className="paddingDiv"><Button className="restartBtn" variant="danger" onClick={() => handleShuffleClick()}>Restart Game</Button></div>)}
+    </div>
   );
 }
 

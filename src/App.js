@@ -5,7 +5,7 @@ import './App.css';
 import Board from './components/Board';
 import { updateURLParameter } from './components/helpers';
 import puzzleImg from './assets/thedash13.gif'
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 import NavigationBar from './components/NavigationBar';
 
 function App() {
@@ -13,7 +13,12 @@ function App() {
     <div className="App">
       {/* <NavigationBar /> */}
       <div className="contentStyle">
-        <h1>M-Dash</h1>
+        {/* <h2>M-Dash</h2> */}
+        {/* <p>A journey of discoveries.</p> */}
+        <div className="titleContainer">
+          <h1>M-Dash</h1>
+        </div>
+
         <Board imgUrl={puzzleImg} /> {/* <input value={imgUrl} onChange={handleImageChange} /> */}
       </div>
     </div>

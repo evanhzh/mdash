@@ -1,10 +1,15 @@
 .App {
   
   text-align: center;
+  min-height: 100vh;
+  background-color: black;
 }
-
+.titleContainer{
+  padding: 0;
+  /* margin-bottom: -2vh; */
+}
 .contentStyle {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items:center;
   text-align: center;
@@ -13,7 +18,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 40px;
+  padding: 100px 0 150px 0;
 }
 h1 {
   color: #FBCD0B;
@@ -21,18 +26,13 @@ h1 {
   font-weight: bold;
   font-size: 48px;
   text-shadow: 2px 2px 5px #fb8500;
+  padding: 40px;
 }
 
-.titleStyle{
-  color: #FBCD0B;
-  font-family: 'Exo 2', sans-serif;
-  font-weight: bold;
-  font-size: 48px;
-  text-shadow: 2px 2px 5px #fb8500;
-}
 
 h2 {
 font-family: 'Open Sans', sans-serif;
+font-weight: bold;
 color: #FBCD0B;
 font-size: 16px;
 }
@@ -82,8 +82,14 @@ font-size: 16px;
   border-style: solid;
   border-color: #ffba08;
   border-width: 10px;
-  background-color: black;
+  background-color: white;
   box-shadow: 0px 0px 10px 10px #fb8500;
+  padding: 0;
+}
+
+.contentDivStyle {
+  padding: 0;
+  margin: 0 auto;
 }
 
 .tile {
@@ -102,6 +108,10 @@ button {
   display: block;
 }
 
+.paddingDiv {
+  padding: 60px 0 0 0;
+}
+
 .startBtn {
   padding: 12px 100px 12px 100px;
   color: white;
@@ -118,4 +128,9 @@ button {
   font-weight: bold;
   font-size: 20px;
   box-shadow: 0px 0px 10px 3px #4f000b;
+}
+
+.btnStyle {
+  font-weight: bold;
+  padding: 12px 100px 12px 100px;
 }
