@@ -1,23 +1,21 @@
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Board from './components/Board';
+import { updateURLParameter } from './components/helpers';
+import puzzleImg from './assets/thedash13.gif'
+import { Navbar } from 'react-bootstrap';
+import NavigationBar from './components/NavigationBar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <NavigationBar /> */}
+      <div className="contentStyle">
+        <h1>M-Dash</h1>
+        <Board imgUrl={puzzleImg} /> {/* <input value={imgUrl} onChange={handleImageChange} /> */}
+      </div>
     </div>
   );
 }
