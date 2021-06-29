@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import useSound from 'use-sound';
 import startSound from '../assets/race-start-1.mp3';
 import clickSound from '../assets/button-click-3.mp3';
-import playingSound from '../assets/happy-groovy-bass-drums.mp3'
+// import playingSound from '../assets/happy-groovy-bass-drums.mp3'
 import playingSound2 from '../assets/groovy-2.mp3'
 import endSound from '../assets/happy-effect.mp3'
 
@@ -14,7 +14,7 @@ function Board({ imgUrl }) {
 
   const [startSoundHook] = useSound(startSound, { volume: 0.1 });
   const [clickSoundHook] = useSound(clickSound, { volume: 0.1 });
-  const [playingSoundHook] = useSound(playingSound, { volume: 0.1 });
+  // const [playingSoundHook] = useSound(playingSound, { volume: 0.1 });
   const [playingSoundHook2] = useSound(playingSound2, { volume: 0.1 });
   const [endSoundHook] = useSound(endSound, { volume: 0.1 });
 
@@ -86,13 +86,14 @@ function Board({ imgUrl }) {
       {hasWon && isStarted &&
         <div className="hasWonDiv paddingDiv">
           <span>{handleWonSound()}</span>
-          <h2>Congratulations, puzzle solved! 🧠 🎉
+          <h2>Congratulations, puzzle solved! <span
+            role="img" aria-label="Yay!">🧠 🎉</span>
           </h2>
           <h2>
             You are now invited to join our Discord channel for your next instructions.
           </h2>
           <br />
-          <Button className="btnStyle" variant="warning" onClick="https://discord.gg/wd4vh7Zq">Join Our M-Dash Discord Channel</Button>
+          <Button className="btnStyle" variant="warning" onClick="https://www.tinyurl.com/mdash2021">Join Our M-Dash Discord Channel</Button>
         </div>}
       {!isStarted ?
         (<div className="paddingDiv"><Button className="startBtn" variant="success" onClick={() => handleStartClick()}>Start Game</Button></div>) :

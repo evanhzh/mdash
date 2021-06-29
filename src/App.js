@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Board from './components/Board';
-import { updateURLParameter } from './components/helpers';
 import puzzleImg from './assets/thedash13.gif'
-import { Navbar, Container } from 'react-bootstrap';
-import NavigationBar from './components/NavigationBar';
+import { Image } from 'react-bootstrap'
+import mdashlogo from "./assets/mdash-logo.jpg";
+
+// import NavigationBar from './components/NavigationBar';
 
 function App() {
   return (
@@ -17,6 +17,13 @@ function App() {
         {/* <p>A journey of discoveries.</p> */}
         <div className="titleContainer">
           <h1>M-Dash</h1>
+          <Image src={mdashlogo} className="logoStyle" fluid />
+          <div className="subtitleContainer">
+            <p>M-Dash is an intensive one-of-its-kind virtual race. <br /> Take control of
+              your journey and decide on your #challengeofchoice!<br /> Dash forward with M-Dash!
+            </p>
+          </div>
+
         </div>
 
         <Board imgUrl={puzzleImg} /> {/* <input value={imgUrl} onChange={handleImageChange} /> */}
