@@ -93,11 +93,11 @@ function Board({ imgUrl }) {
             You are now invited to join our Discord channel for your next instructions.
           </h2>
           <br />
-          <Button className="btnStyle" variant="warning" onClick="https://www.tinyurl.com/mdash2021">Join Our M-Dash Discord Channel</Button>
+          <a href="https://discord.gg/sPwd4rqVz3" target="_blank" class="btn btn-warning joinBtn">Join the M-Dash Discord Server Now!</a>
         </div>}
       {!isStarted ?
-        (<div className="paddingDiv"><Button className="startBtn" variant="success" onClick={() => handleStartClick()}>Start Game</Button></div>) :
-        (<div className="paddingDiv"><Button className="restartBtn" variant="danger" onClick={() => handleShuffleClick()}>Restart Game</Button></div>)}
+        (<div className="paddingDiv"><Button className="startBtn" variant="success" onClick={() => handleStartClick()}>Start the DASH!</Button></div>) :
+        (<div className="paddingDiv"><Button className="restartBtn" variant="danger" onClick={() => handleShuffleClick()}>Reset Puzzle</Button></div>)}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import './App.css';
 import Board from './components/Board';
 import puzzleImg from './assets/thedash13.gif'
 import { Image } from 'react-bootstrap'
-import mdashlogo from "./assets/mdash-logo.jpg";
+import mdashlogo from "./assets/mdashlogo.png";
 
 // import NavigationBar from './components/NavigationBar';
 
@@ -16,12 +16,14 @@ function App() {
         {/* <h2>M-Dash</h2> */}
         {/* <p>A journey of discoveries.</p> */}
         <div className="titleContainer">
-          <h1>M-Dash</h1>
           <Image src={mdashlogo} className="logoStyle" fluid />
           <div className="subtitleContainer">
-            <p>M-Dash is an intensive one-of-its-kind virtual race. <br /> Take control of
-              your journey and decide on your #challengeofchoice!<br /> Dash forward with M-Dash!
+            <h1>Dashers!  <br />This is your next challenge.</h1>
+            <p>Start the DASH now and unscramble the puzzle below to reveal the next step of your M-Dash journey.
+              <br />
+              All the best, Dashers!
             </p>
+
           </div>
 
         </div>
